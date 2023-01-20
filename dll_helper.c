@@ -109,12 +109,10 @@ int del_nodeAt(stack_t **stack, unsigned int index)
 		{
 			(*stack)->prev = NULL;
 		}
-		free(tmp0); // delete the first node
+		free(tmp0);
 		return (0);
 	}
 
-
-	// find the node at the index
 	i = 0;
 	tmp0 = tmp0->next;
 	while (i <= index - 1)
@@ -124,7 +122,6 @@ int del_nodeAt(stack_t **stack, unsigned int index)
 		i++;
 		tmp0 = tmp0->next;
 	}
-	// stack node to delete
 	current = tmp0->next;
 	tmp1 = current->next;
 	if (tmp1)

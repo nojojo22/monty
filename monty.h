@@ -1,6 +1,6 @@
 #ifndef MONTY_HEADER
 #define MONTY_HEADER
-
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -43,6 +43,8 @@ stack_t *newStackNode(const int n);
 
 void parse_file(char *filename, stack_t **stack);
 char *parse(char *line);
+instruction_func get_op_func(char *str);
+
 
 #include "dll_helper.h"
 #include "utils.h"

@@ -17,18 +17,19 @@
 	return;
 }
 */
-int main()
+int main(int argc, char **argv)
 {
 	stack_t *stack;
 	stack = NULL;
 
-	if (ac != 2)
+	if (argc != 2)
 	{
 		printf("USAGE: monty file\n");
 		err_exit(&stack);
 	}
 
-	// read file to the stack
-	parse_file(av[1], &stack);
+	parse_file(argv[1], &stack);
 	free_list(stack);
+
+	return (0);
 }
