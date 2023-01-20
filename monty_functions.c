@@ -81,7 +81,7 @@ instruction_func get_op_func(char *str)
 char *parse(char *line)
 {
 	char *opcode;
-	char *delim = "\n ";
+	char *delim = " \n\t";
 
 	opcode = strtok(line, delim);
 

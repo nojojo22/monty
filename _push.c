@@ -16,7 +16,7 @@ void _push(stack_t **stack, unsigned int line_num)
 
 	push_arg = 0;
 
-	arg = strtok(NULL, "\n ");
+	arg = strtok(NULL, " \n\t");
 	if (isnumber(arg))
 	{
 		push_arg = atoi(arg);
