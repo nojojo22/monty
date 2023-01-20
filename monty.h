@@ -37,6 +37,8 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+extern int s_flag;
+
 typedef void (*instruction_func)(stack_t **stack, unsigned int line_number);
 
 stack_t *newStackNode(const int n);
@@ -45,8 +47,10 @@ void parse_file(char *filename, stack_t **stack);
 char *parse(char *line);
 instruction_func get_op_func(char *str);
 
+int isnumber(char *val);
 
 #include "dll_helper.h"
 #include "utils.h"
+#include "stack_functions.h"
 
 #endif

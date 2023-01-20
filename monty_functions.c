@@ -62,6 +62,8 @@ instruction_func get_op_func(char *str)
 	int i;
 
 	instruction_t instruction[] = {
+		{"push", _push},
+		{"pall", _pall},
 		{NULL, NULL}
 	};
 

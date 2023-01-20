@@ -4,7 +4,7 @@
  * add_node - this function adds an new node to the stack
  * @stack: stack head
  * @n: new item
- * Return: new node or NULL 
+ * Return: new node or NULL
  */
 stack_t *add_node(stack_t **stack, const int n)
 {
