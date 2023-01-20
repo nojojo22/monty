@@ -17,5 +17,10 @@ stack_t *newStackNode(const int n)
 		new->prev = NULL;
 		new->n = n;
 	}
+	else
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	return (new);
 }

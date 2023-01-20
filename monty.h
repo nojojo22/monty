@@ -50,9 +50,15 @@ instruction_func get_op_func(char *str);
 
 int _isdigit(int n);
 int isnumber(char *val);
+stack_t *add_node_end(stack_t **stack, const int n);
+stack_t *add_node(stack_t **stack, const int n);
+void free_list(stack_t *stack);
+int del_nodeAt(stack_t **stack, unsigned int index);
 
-#include "dll_helper.h"
-#include "utils.h"
-#include "stack_functions.h"
+void err_exit(stack_t **stack);
+
+void _push(stack_t **stack, unsigned int line_num);
+void _pall(stack_t **stack, unsigned int line_num);
+void _pint(stack_t **stack, unsigned int line_pos);
 
 #endif

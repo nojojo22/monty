@@ -1,6 +1,5 @@
 #include "monty.h"
-#include <stdio.h>
-#include <stdlib.h>
+
 
 /**
  * parse_file - reads bytecode file and interpretes it commands
@@ -16,13 +15,12 @@ void parse_file(char *filename, stack_t **stack)
 	instruction_func s;
 	char *line = NULL;
 	char *buffer = NULL;
-	int check;
 
 	fp = fopen(filename, "r");
 
 	if (!fp)
 	{
-		printf("Error: Can't open file %s\n", filename);
+		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		err_exit(stack);
 	}
 
@@ -46,10 +44,7 @@ void parse_file(char *filename, stack_t **stack)
 		line_count++;
 	}
 	free(buffer);
-	check = fclose(fp);
-
-	if (check == -1)
-		exit(-1);
+	fclose(fp);
 }
 
 /**
@@ -65,6 +60,7 @@ instruction_func get_op_func(char *str)
 	instruction_t instruction[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL}
 	};
 
