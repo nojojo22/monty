@@ -14,6 +14,19 @@ void err_exit(stack_t **stack)
 	exit(EXIT_FAILURE);
 }
 
+/**
+ * _isdigit - checks if @ch is a digit
+ * @ch: value to be checked
+ * Return: 1 on success, 0 on failure
+ */
+int _isdigit(int ch)
+{
+	if (ch >= '0' && ch <= '9')
+
+		return (1);
+	else
+		return (0);
+}
 
 /**
  * isnumber - checks if @str is a number
@@ -29,7 +42,7 @@ int isnumber(char *str)
 
 	while (str[i])
 	{
-		if (str[0] == '-' || isdigit(str[i]))
+		if (str[0] == '-' || _isdigit(str[i]))
 		{
 			i++;
 			continue;

@@ -47,6 +47,7 @@ void parse_file(char *filename, stack_t **stack);
 char *parse(char *line);
 instruction_func get_op_func(char *str);
 
+int _isdigit(int n);
 int isnumber(char *val);
 
 #include "dll_helper.h"
