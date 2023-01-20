@@ -1,4 +1,4 @@
-A team work between Akanni Etooluwa and Onojo Martha Ameh on;
+A team work between Akanni Emmanuel Etooluwa and Onojo Martha Ameh on;
 
 0x19. C - Stacks, Queues - LIFO, FIFO
 
