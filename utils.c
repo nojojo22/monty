@@ -22,7 +22,6 @@ void err_exit(stack_t **stack)
 int _isdigit(int ch)
 {
 	if (ch >= '0' && ch <= '9')
-
 		return (1);
 	else
 		return (0);
@@ -40,9 +39,11 @@ int isnumber(char *str)
 	if (!str)
 		return (0);
 
+	if (str[0] == '-')
+		i++;
 	while (str[i])
 	{
-		if (str[0] == '-' || _isdigit(str[i]))
+		if (_isdigit(str[i]))
 		{
 			i++;
 			continue;
