@@ -5,7 +5,7 @@
  * @line_num: line number in bytecode file
  * @stack: the stack
  */
-void _pall(stack_t **stack, unsigned int line_num)
+void _pall(stack_t **stack, unsigned int __attribute__((unused)) line_num)
 {
 	stack_t *tmp;
 
